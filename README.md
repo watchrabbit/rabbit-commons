@@ -1,11 +1,27 @@
 [![][coverage img]][coverage]
 [![][travis img]][travis]
+[![Maven central][maven img]][maven]
 
 Watchrabbit - Commons
 =====================
 
 This library is a mix of useful developer tools, with special emphasis on java8 
 syntax.
+
+## Current release
+16/09/2014 rabbit-commons **1.0.0** released! Should appear in maven central shortly.
+
+## Download and install
+```
+<dependency>
+  <groupId>com.watchrabbit</groupId>
+  <artifactId>rabbit-commons</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
+
+How to use
+-----
 
 Sleep
 -----
@@ -51,8 +67,9 @@ Clock
 -----
 
 `SystemClock` improves testability of code by delegation of creation 
-time-connected objects. When there is a need of testing time-based code, in unit 
-test anyone can mock clock or provide custom callback factory methods. For example:
+time-connected objects. When there is a need of testing time-based code, if code
+is using `SystemClock` to get dates, in unit tests anyone can mock clock or 
+provide custom callback factory methods. For example:
 
 ```java
 public class Foo {
@@ -156,7 +173,9 @@ public class Foo {
 }
 ```
 
-[coverage]:https://coveralls.io/r/watchrabbit/commons
-[coverage img]:https://img.shields.io/coveralls/watchrabbit/commons.png
-[travis]:https://travis-ci.org/watchrabbit/commons
-[travis img]:https://travis-ci.org/watchrabbit/commons.svg?branch=master
+[coverage]:https://coveralls.io/r/watchrabbit/rabbit-commons
+[coverage img]:https://img.shields.io/coveralls/watchrabbit/rabbit-commons.png
+[travis]:https://travis-ci.org/watchrabbit/rabbit-commons
+[travis img]:https://travis-ci.org/watchrabbit/rabbit-commons.svg?branch=master
+[maven]:https://maven-badges.herokuapp.com/maven-central/com.watchrabbit/rabbit-commons
+[maven img]:https://maven-badges.herokuapp.com/maven-central/com.watchrabbit/rabbit-commons/badge.svg
