@@ -14,12 +14,14 @@ syntax.
 ## Download and install
 ```
 <dependency>
-  <groupId>junit</groupId>
-  <artifactId>junit</artifactId>
-  <version>4.11</version>
-  <scope>test</scope>
+  <groupId>com.watchrabbit</groupId>
+  <artifactId>rabbit-commons</artifactId>
+  <version>1.0.0</version>
 </dependency>
 ```
+
+How to use
+-----
 
 Sleep
 -----
