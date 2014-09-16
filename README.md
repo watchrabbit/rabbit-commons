@@ -51,8 +51,9 @@ Clock
 -----
 
 `SystemClock` improves testability of code by delegation of creation 
-time-connected objects. When there is a need of testing time-based code, in unit 
-test anyone can mock clock or provide custom callback factory methods. For example:
+time-connected objects. When there is a need of testing time-based code, if code
+is using `SystemClock` to get dates, in unit tests anyone can mock clock or 
+provide custom callback factory methods. For example:
 
 ```java
 public class Foo {
