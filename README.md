@@ -8,6 +8,9 @@ Watchrabbit - Commons
 This library is a mix of useful developer tools, with special emphasis on java8 
 syntax.
 
+## Current release
+16/09/2014 rabbit-commons **1.0.0** released! Should appear in maven central shortly.
+
 Sleep
 -----
 
