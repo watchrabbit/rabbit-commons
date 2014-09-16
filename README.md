@@ -156,7 +156,7 @@ public class Foo {
 }
 ```
 
-[coverage]:https://coveralls.io/r/watchrabbit/commons
-[coverage img]:https://img.shields.io/coveralls/watchrabbit/commons.png
-[travis]:https://travis-ci.org/watchrabbit/commons
-[travis img]:https://travis-ci.org/watchrabbit/commons.svg?branch=master
+[coverage]:https://coveralls.io/r/watchrabbit/rabbit-commons
+[coverage img]:https://img.shields.io/coveralls/watchrabbit/rabbit-commons.png
+[travis]:https://travis-ci.org/watchrabbit/rabbit-commons
+[travis img]:https://travis-ci.org/watchrabbit/rabbit-commons.svg?branch=master
