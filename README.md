@@ -1,6 +1,6 @@
 [![][coverage img]][coverage]
 [![][travis img]][travis]
-[![Maven central](https://maven-badges.herokuapp.com/maven-central/com.watchrabbit/rabbit-commons/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.watchrabbit/rabbit-commons)
+[![Maven central][maven img]][maven]
 
 Watchrabbit - Commons
 =====================
@@ -177,3 +177,5 @@ public class Foo {
 [coverage img]:https://img.shields.io/coveralls/watchrabbit/rabbit-commons.png
 [travis]:https://travis-ci.org/watchrabbit/rabbit-commons
 [travis img]:https://travis-ci.org/watchrabbit/rabbit-commons.svg?branch=master
+[maven]:https://maven-badges.herokuapp.com/maven-central/com.watchrabbit/rabbit-commons
+[maven img]:https://maven-badges.herokuapp.com/maven-central/com.watchrabbit/rabbit-commons/badge.svg
