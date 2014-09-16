@@ -1,5 +1,6 @@
 [![][coverage img]][coverage]
 [![][travis img]][travis]
+[![Maven central](https://maven-badges.herokuapp.com/maven-central/com.watchrabbit/rabbit-commons/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.watchrabbit/rabbit-commons)
 
 Watchrabbit - Commons
 =====================
