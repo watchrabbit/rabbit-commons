@@ -11,6 +11,16 @@ syntax.
 ## Current release
 16/09/2014 rabbit-commons **1.0.0** released! Should appear in maven central shortly.
 
+## Download and install
+```
+<dependency>
+  <groupId>junit</groupId>
+  <artifactId>junit</artifactId>
+  <version>4.11</version>
+  <scope>test</scope>
+</dependency>
+```
+
 Sleep
 -----
 
