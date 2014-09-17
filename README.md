@@ -9,14 +9,14 @@ This library is a mix of useful developer tools, with special emphasis on java8
 syntax.
 
 ## Current release
-16/09/2014 rabbit-commons **1.0.0** released! Should appear in maven central shortly.
+18/09/2014 rabbit-commons **1.0.1** released! Should appear in maven central shortly.
 
 ## Download and install
 ```
 <dependency>
   <groupId>com.watchrabbit</groupId>
   <artifactId>rabbit-commons</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
 </dependency>
 ```
 
