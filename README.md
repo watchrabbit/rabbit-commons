@@ -44,7 +44,7 @@ Sleep method returns last value returned by callback before sleep was interrupte
 
 ### Advanced
 
-Every method in `Sleep` class is a shortcut with produces `SleepBuilder` with 
+Every method in `Sleep` class is a shortcut which produces `SleepBuilder` with 
 few default settings. Additional settings in builder are:
 
 * `name` of current sleeper used in logs,
@@ -102,7 +102,7 @@ Throwables
 ----------
 
 The `Throwables` class provides few method that can be used in lambdas for 
-propagate or suppress `Exceptions`. For example, this snipped of code that uses 
+propagate or suppress `Exceptions`. For example, this snippet of code that uses 
 function with checked exception: 
 
 ```java
