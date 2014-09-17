@@ -2,6 +2,7 @@ package com.watchrabbit.commons.sleep;
 
 import com.watchrabbit.commons.exception.SystemException;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.Test;
@@ -42,6 +43,24 @@ public class SleepBuilderTest {
                 .withComparer(argument -> argument)
                 .withStatement(() -> {
                     throw new RuntimeException();
+                })
+                .build();
+    }
+
+    @Test(timeout = 80)
+    public void shoudlBreakOnInterrupt() {
+        Thread currentThread = Thread.currentThread();
+        Executors.newSingleThreadScheduledExecutor()
+                .schedule(() -> {
+                    currentThread.interrupt();
+                }, 50, TimeUnit.MILLISECONDS);
+
+        SleepBuilder.<Boolean>sleep()
+                .withTimeout(500, TimeUnit.MILLISECONDS)
+                .withInterval(200, TimeUnit.MILLISECONDS)
+                .withComparer(argument -> argument)
+                .withStatement(() -> {
+                    return Boolean.TRUE;
                 })
                 .build();
     }
