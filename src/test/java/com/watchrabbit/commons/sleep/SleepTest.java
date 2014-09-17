@@ -15,7 +15,7 @@
  */
 package com.watchrabbit.commons.sleep;
 
-import com.watchrabbit.commons.wraper.Wrapper;
+import com.watchrabbit.commons.wrapper.Wrapper;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;

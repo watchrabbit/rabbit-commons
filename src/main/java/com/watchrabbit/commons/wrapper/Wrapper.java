@@ -1,4 +1,4 @@
-package com.watchrabbit.commons.wraper;
+package com.watchrabbit.commons.wrapper;
 
 /**
  *
