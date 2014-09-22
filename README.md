@@ -1,6 +1,6 @@
-[![][coverage img]][coverage]
-[![][travis img]][travis]
 [![Maven central][maven img]][maven]
+[![][travis img]][travis]
+[![][coverage img]][coverage]
 
 Watchrabbit - Commons
 =====================
