@@ -19,7 +19,7 @@ syntax.
   <version>1.0.1</version>
 </dependency>
 ```
-
+ 
 How to use
 -----
 
