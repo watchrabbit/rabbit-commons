@@ -30,26 +30,26 @@ public class StopwatchTest {
     @Test
     public void shouldCalculateTimeOnAutostart() {
         long executionTime = Stopwatch
-                .createStarted(() -> sleep(1, TimeUnit.SECONDS))
-                .getExecutionTime(TimeUnit.MICROSECONDS);
+                .createStarted(() -> sleep(1000, TimeUnit.MILLISECONDS))
+                .getExecutionTime(TimeUnit.MILLISECONDS);
 
-        assertThat(executionTime).isGreaterThan(1000l);
+        assertThat(executionTime).isGreaterThan(990l);
     }
 
     @Test
     public void shouldCalculateTimeOnCustomStart() {
         long executionTime = Stopwatch
-                .create(() -> sleep(1, TimeUnit.SECONDS))
+                .create(() -> sleep(1000, TimeUnit.MILLISECONDS))
                 .start()
-                .getExecutionTime(TimeUnit.MICROSECONDS);
+                .getExecutionTime(TimeUnit.MILLISECONDS);
 
-        assertThat(executionTime).isGreaterThan(1000l);
+        assertThat(executionTime).isGreaterThan(990l);
     }
 
     @Test(expected = SystemException.class)
     public void shouldThrowIfNotStarted() {
         Stopwatch
-                .create(() -> sleep(1, TimeUnit.SECONDS))
-                .getExecutionTime(TimeUnit.MICROSECONDS);
+                .create(() -> sleep(1000, TimeUnit.MILLISECONDS))
+                .getExecutionTime(TimeUnit.MILLISECONDS);
     }
 }
