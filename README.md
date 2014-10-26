@@ -97,6 +97,30 @@ public class FooTest {
 }
 ```
 
+Stopwatch
+---------
+
+The `Stopwatch` can be used to measure time of method execution. To use this stopwatch:
+```java
+    long executionTime = Stopwatch
+      .createStarted(() -> {
+        //here put your code
+      })).getExecutionTime(TimeUnit.SECONDS);
+```
+
+AbstractBuilder
+---------------
+
+The `AbstractBuilder` can be used as template for custom builders. After completing building the object it can be stored by passing persistence create method as method reference:
+```java
+    EntityManager manager;
+    
+    public void foo() {
+      new SomeObjectBuilder()
+        .withSomething(something)
+        .build(manager::persist)
+    }
+```
 
 Throwables
 ----------
