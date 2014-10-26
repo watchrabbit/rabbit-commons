@@ -16,6 +16,7 @@
 package com.watchrabbit.commons.sleep;
 
 import com.watchrabbit.commons.exception.SystemException;
+import static com.watchrabbit.commons.exception.Throwables.suppress;
 import java.util.Collection;
 import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
@@ -25,6 +26,23 @@ import java.util.concurrent.TimeUnit;
  * @author Mariusz
  */
 public class Sleep {
+
+    /**
+     * Causes the current thread to wait until the specified waiting time
+     * elapses.
+     *
+     * <p>
+     * Any {@code InterruptedException}'s are suppress and logged. Any
+     * {@code Exception}'s thrown by callable are propagate as SystemException
+     *
+     * @param timeout the maximum time to wait
+     * @param unit the time unit of the {@code timeout} argument
+     * @throws SystemException if callable throws exception
+     */
+    public static void sleep(long timeout, TimeUnit unit) throws SystemException {
+        suppress((Long sleepTimeout) -> Thread.sleep(sleepTimeout))
+                .accept(TimeUnit.MILLISECONDS.convert(timeout, unit));
+    }
 
     /**
      * Causes the current thread to wait until the callable is returning
