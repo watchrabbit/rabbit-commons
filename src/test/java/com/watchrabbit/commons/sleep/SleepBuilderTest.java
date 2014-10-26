@@ -29,7 +29,7 @@ public class SleepBuilderTest {
                 })
                 .build();
 
-        assertThat(System.currentTimeMillis()).isGreaterThan(currentTimeMillis + 100);
+        assertThat(System.currentTimeMillis()).isGreaterThan(currentTimeMillis + 99);
         assertThat(latch.getCount()).isLessThan(2);
     }
 

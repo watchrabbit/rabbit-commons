@@ -40,7 +40,7 @@ public class AbstractBuilder<E> {
      * @param persistenceMenager
      * @return persistent builded object;
      */
-    public E build(Consumer persistenceMenager) {
+    public E build(Consumer<E> persistenceMenager) {
         persistenceMenager.accept(data);
         return data;
     }

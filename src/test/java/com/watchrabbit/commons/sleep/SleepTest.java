@@ -36,7 +36,7 @@ public class SleepTest {
 
         Sleep.untilTrue(() -> true, 500, TimeUnit.MILLISECONDS);
 
-        assertThat(System.currentTimeMillis()).isGreaterThan(currentTimeMillis + 500);
+        assertThat(System.currentTimeMillis()).isGreaterThan(currentTimeMillis + 499);
     }
 
     @Test
@@ -52,7 +52,7 @@ public class SleepTest {
 
         Sleep.untilFalse(() -> false, 500, TimeUnit.MILLISECONDS);
 
-        assertThat(System.currentTimeMillis()).isGreaterThan(currentTimeMillis + 500);
+        assertThat(System.currentTimeMillis()).isGreaterThan(currentTimeMillis + 499);
     }
 
     @Test
@@ -68,7 +68,7 @@ public class SleepTest {
 
         Sleep.untilEmpty(Arrays::asList, 500, TimeUnit.MILLISECONDS);
 
-        assertThat(System.currentTimeMillis()).isGreaterThan(currentTimeMillis + 500);
+        assertThat(System.currentTimeMillis()).isGreaterThan(currentTimeMillis + 499);
     }
 
     @Test
@@ -85,7 +85,7 @@ public class SleepTest {
 
         Sleep.untilNotEmpty(() -> Arrays.asList(""), 500, TimeUnit.MILLISECONDS);
 
-        assertThat(System.currentTimeMillis()).isGreaterThan(currentTimeMillis + 500);
+        assertThat(System.currentTimeMillis()).isGreaterThan(currentTimeMillis + 499);
     }
 
     @Test
@@ -102,7 +102,7 @@ public class SleepTest {
 
         Sleep.untilNull(() -> null, 500, TimeUnit.MILLISECONDS);
 
-        assertThat(System.currentTimeMillis()).isGreaterThan(currentTimeMillis + 500);
+        assertThat(System.currentTimeMillis()).isGreaterThan(currentTimeMillis + 499);
     }
 
     @Test
@@ -118,7 +118,7 @@ public class SleepTest {
 
         Sleep.untilNotNull(Object::new, 500, TimeUnit.MILLISECONDS);
 
-        assertThat(System.currentTimeMillis()).isGreaterThan(currentTimeMillis + 500);
+        assertThat(System.currentTimeMillis()).isGreaterThan(currentTimeMillis + 499);
     }
 
     @Test
