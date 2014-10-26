@@ -33,12 +33,24 @@ public class Stopwatch {
 
     private boolean ended;
 
+    /**
+     * Creates Stopwatch around passed callable.
+     *
+     * @param callable with invocation time would be measured
+     * @return
+     */
     public static Stopwatch create(VoidCallable callable) {
         Stopwatch stopwatch = new Stopwatch();
         stopwatch.callable = callable;
         return stopwatch;
     }
 
+    /**
+     * Creates Stopwatch around passed callable and invokes callable.
+     *
+     * @param callable with invocation time would be measured
+     * @return
+     */
     public static Stopwatch createStarted(VoidCallable callable) {
         Stopwatch stopwatch = new Stopwatch();
         stopwatch.callable = callable;
@@ -46,6 +58,11 @@ public class Stopwatch {
         return stopwatch;
     }
 
+    /**
+     * Invokes passed callable and measures time.
+     *
+     * @return
+     */
     public Stopwatch start() {
         nanosStart = System.nanoTime();
         callable.call();
@@ -54,9 +71,15 @@ public class Stopwatch {
         return this;
     }
 
+    /**
+     * Returns time of execution of callable, converted to {@code TimeUnit}.
+     *
+     * @param timeUnit of execution time.
+     * @return
+     */
     public long getExecutionTime(TimeUnit timeUnit) {
         if (!ended) {
-            throw new SystemException("Cannot return execution time if Stopwatch wasn't started");
+            throw new SystemException("Can't return execution time if Stopwatch wasn't started");
         }
         return timeUnit.convert(nanosEnd - nanosStart, TimeUnit.NANOSECONDS);
     }

@@ -25,12 +25,23 @@ public class AbstractBuilder<E> {
 
     protected E data;
 
+    /**
+     * Returns builded object.
+     *
+     * @return builded object.
+     */
     public E build() {
         return data;
     }
 
-    public E build(Consumer persistanceMenager) {
-        persistanceMenager.accept(data);
+    /**
+     * Builds object and invokes passed persistence method.
+     *
+     * @param persistenceMenager
+     * @return persistent builded object;
+     */
+    public E build(Consumer persistenceMenager) {
+        persistenceMenager.accept(data);
         return data;
     }
 
