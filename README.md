@@ -7,6 +7,7 @@ Watchrabbit - Commons
 
 This library is a mix of useful developer tools, with special emphasis on java8 
 syntax.
+Powered by [watchrabbit]
 
 ## Current release
 26/10/2014 rabbit-commons **1.1.1** released! Should appear in maven central shortly.
@@ -197,6 +198,7 @@ public class Foo {
 }
 ```
 
+[watchrabbit]:http://watchrabbit.com
 [coverage]:https://coveralls.io/r/watchrabbit/rabbit-commons
 [coverage img]:https://img.shields.io/coveralls/watchrabbit/rabbit-commons.png
 [travis]:https://travis-ci.org/watchrabbit/rabbit-commons
