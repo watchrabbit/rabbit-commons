@@ -199,7 +199,7 @@ public class Foo {
 }
 ```
 
-[watchrabbit]:http://watchrabbit.com
+[watchrabbit.com]:http://watchrabbit.com
 [coverage]:https://coveralls.io/r/watchrabbit/rabbit-commons
 [coverage img]:https://img.shields.io/coveralls/watchrabbit/rabbit-commons.png
 [travis]:https://travis-ci.org/watchrabbit/rabbit-commons
