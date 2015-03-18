@@ -8,15 +8,17 @@ Watchrabbit - Commons
 This library is a mix of useful developer tools, with special emphasis on java8 
 syntax.
 
+## Powered by [watchrabbit.com]
+
 ## Current release
-26/10/2014 rabbit-commons **1.1.1** released! Should appear in maven central shortly.
+18/03/2015 rabbit-commons **1.1.2** released! Should appear in maven central shortly.
 
 ## Download and install
 ```
 <dependency>
   <groupId>com.watchrabbit</groupId>
   <artifactId>rabbit-commons</artifactId>
-  <version>1.1.1</version>
+  <version>1.1.2</version>
 </dependency>
 ```
  
@@ -97,6 +99,30 @@ public class FooTest {
 }
 ```
 
+Stopwatch
+---------
+
+The `Stopwatch` can be used to measure time of method execution. To use this stopwatch:
+```java
+    long executionTime = Stopwatch
+      .createStarted(() -> {
+        //here put your code
+      })).getExecutionTime(TimeUnit.SECONDS);
+```
+
+AbstractBuilder
+---------------
+
+The `AbstractBuilder` can be used as template for custom builders. After completing building the object it can be stored by passing persistence create method as method reference:
+```java
+    EntityManager manager;
+    
+    public void foo() {
+      new SomeObjectBuilder()
+        .withSomething(something)
+        .build(manager::persist)
+    }
+```
 
 Throwables
 ----------
@@ -173,6 +199,7 @@ public class Foo {
 }
 ```
 
+[watchrabbit.com]:http://watchrabbit.com
 [coverage]:https://coveralls.io/r/watchrabbit/rabbit-commons
 [coverage img]:https://img.shields.io/coveralls/watchrabbit/rabbit-commons.png
 [travis]:https://travis-ci.org/watchrabbit/rabbit-commons
