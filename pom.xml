@@ -19,7 +19,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.watchrabbit</groupId>
     <artifactId>rabbit-commons</artifactId>
-    <version>1.1.2</version>
+    <version>1.1.3-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>Watchrabbit - Commons</name>
     <description>Utils and tools with java 8 syntax support</description>
