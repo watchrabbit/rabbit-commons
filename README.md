@@ -11,14 +11,14 @@ syntax.
 ## Powered by [watchrabbit.com]
 
 ## Current release
-26/10/2014 rabbit-commons **1.1.1** released! Should appear in maven central shortly.
+18/03/2015 rabbit-commons **1.1.2** released! Should appear in maven central shortly.
 
 ## Download and install
 ```
 <dependency>
   <groupId>com.watchrabbit</groupId>
   <artifactId>rabbit-commons</artifactId>
-  <version>1.1.1</version>
+  <version>1.1.2</version>
 </dependency>
 ```
  
