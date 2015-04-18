@@ -11,7 +11,7 @@ syntax.
 ## Powered by [watchrabbit.com]
 
 ## Current release
-18/04/2015 rabbit-commons **1.1.2** released! Should appear in maven central shortly.
+18/04/2015 rabbit-commons **1.1.3** released! Should appear in maven central shortly.
 
 ## Download and install
 ```
