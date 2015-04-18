@@ -11,19 +11,40 @@ syntax.
 ## Powered by [watchrabbit.com]
 
 ## Current release
-18/03/2015 rabbit-commons **1.1.2** released! Should appear in maven central shortly.
+18/04/2015 rabbit-commons **1.1.2** released! Should appear in maven central shortly.
 
 ## Download and install
 ```
 <dependency>
   <groupId>com.watchrabbit</groupId>
   <artifactId>rabbit-commons</artifactId>
-  <version>1.1.2</version>
+  <version>1.1.3</version>
 </dependency>
 ```
  
 How to use
 -----
+
+FutureContext
+-----
+
+The `FutureContext` class can be used to make work with `Future<T>` easier. `FutureContext` is a singleton thread. To register any future and retrieved result consumer use:
+
+```java
+  Future<String> foo = ...
+  Future<String> boo = ...
+  
+  FutureContext.register(foo, System.out::println); 
+  FutureContext.register(boo, System.out::println, 2, TimeUnit.SECONDS); //specify timeout
+```
+
+To resolve each registered futures and invoke consumers with retrieved results just invoke invoke:
+
+```java
+  FutureContext.resolve();
+```
+
+To improve working experiance in enterprise is good to create aspect or filter resolving `FutureConetext`. 
 
 Sleep
 -----
@@ -37,8 +58,8 @@ Sleep can be started just one line of code. For example, this method would sleep
 current thread until value is equal to false for 500 milliseconds:
 
 ```java
-   Wrapper<Boolean> wrapper = new Wrapper(false);
-   boolean returned = Sleep.untilFalse(() -> wrapper.getValue(), 500, TimeUnit.MILLISECONDS);
+  Wrapper<Boolean> wrapper = new Wrapper(false);
+  boolean returned = Sleep.untilFalse(() -> wrapper.getValue(), 500, TimeUnit.MILLISECONDS);
 ```
 
 If other thread modify wrapper value during this 500 millisecond sleep will interrupt.
