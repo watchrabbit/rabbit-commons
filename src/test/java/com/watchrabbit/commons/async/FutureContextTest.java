@@ -15,6 +15,7 @@
  */
 package com.watchrabbit.commons.async;
 
+import com.watchrabbit.commons.exception.SystemException;
 import static com.watchrabbit.commons.sleep.Sleep.untilFalse;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CountDownLatch;
@@ -39,6 +40,14 @@ public class FutureContextTest {
         FutureContext.resolve();
 
         assertThat(countDownLatch.getCount()).isEqualTo(0);
+    }
+
+    @Test(expected = SystemException.class, timeout = 2000)
+    public void shouldWaitAndThrow() {
+        CompletableFuture<CountDownLatch> future = new CompletableFuture<>();
+
+        FutureContext.register(future, latch -> latch.countDown(), 1, TimeUnit.SECONDS);
+        FutureContext.resolve();
     }
 
     @Test
